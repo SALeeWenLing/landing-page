@@ -39,13 +39,16 @@ const sections = document.querySelectorAll('section');
 function buildNavBar() {
   for(let i=0; i<sections.length; i++){
     const section = sections[i]
+    const sectionName = section.dataset.nav;
+    const sectionId = section.id;
     const tab = document.createElement('li');
-    tab.innerHTML = section.getAttribute('data-nav');
+    tab.innerHTML = `<a class="menu__link" href="#${sectionId}">${sectionName}</a>`;
     nav.appendChild(tab);
   }
 };
 
 buildNavBar();
+
 
 // Add class 'active' to section when near top of viewport
 
