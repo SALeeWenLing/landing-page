@@ -1,8 +1,14 @@
 # Landing Page Project
 
-## Table of Contents
+## files
 
-* [Instructions](#instructions)
+CSS
+JavaScript
+HTML
+
+## Aim of Project
+
+Use JavaScript to create a landing page with a dynamic navigation bar that scrolls to each selected section of a web page.  
 
 ## Instructions
 
