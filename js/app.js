@@ -37,12 +37,16 @@ const sections = document.querySelectorAll('section');
 // build the nav
 
 function buildNavBar() {
+  //loops over each section in sections
   for(let i=0; i<sections.length; i++){
     const section = sections[i]
     const sectionName = section.dataset.nav;
     const sectionId = section.id;
+    //creates new <li> element in the nav ul
     const tab = document.createElement('li');
+    //ammends the HTML to include link
     tab.innerHTML = `<a class="menu__link" href="#${sectionId}">${sectionName}</a>`;
+    //appends the finished li to the parent ul
     nav.appendChild(tab);
   }
 };
