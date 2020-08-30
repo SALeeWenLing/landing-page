@@ -26,4 +26,4 @@ To-do list:
 - Collapse navigation bar for small devices
 
 ## Status
-- Project is: in progress
+- Project is: In progress
