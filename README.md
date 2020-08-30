@@ -1,10 +1,10 @@
 # Landing Page Project
 
-## files
+## Languages Used
 
-CSS
-JavaScript
-HTML
+- CSS
+- JavaScript
+- HTML
 
 ## Aim of Project
 
