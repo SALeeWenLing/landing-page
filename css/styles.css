@@ -86,20 +86,15 @@ section {
     color: #000;
 }
 
-/* .navbar__menu .menu__link:hover {
-    background: #333;
+.navbar__menu .menu__link:hover {
+    background: #808080;
     color: #fff;
     transition: ease 0.3s all;
-} */
-
-.navbar__menu .menu__link {
-  color: #000;
-  transition: ease 0.3s all;
 }
 
 .active {
-  background: #DCDCDC;
-  color: #fff;
+  background: #808080;
+  color: #fff !important;
 }
 
 /* Header Styles */
