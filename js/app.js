@@ -44,7 +44,8 @@ function buildNavBar() {
     //creates new <li> element in the nav ul
     const tab = document.createElement('li');
     //ammends the innerHTML of li item to include link
-    tab.innerHTML = `<a class="menu__link" href="#${sectionId}">${sectionName}</a>`;
+    tab.innerHTML = `<a id="nav_${sectionId}" class="menu__link" href="#${sectionId}">${sectionName}</a>`;
+    // tab.innerHTML = `<a id="${sectionId}" class="menu__link" href="#${sectionId}">${sectionName}</a>`;
     //appends the finished li to the parent ul
     nav.appendChild(tab);
   }
@@ -57,14 +58,21 @@ buildNavBar();
 
 function makeActive() {
   for (const section of sections) {
+    // if section is in Viewport, add "your-active-class"
     if (inViewport(section) === true) {
+      const id = section.getAttribute("id");
+      document.querySelector(`#nav_${id}`).classList.add("active");
       addActiveClass(section);
+    // if section is not in Viewport, remove "your-active-class"
     } else {
+      const id = section.getAttribute("id");
+      document.querySelector(`#nav_${id}`).classList.remove("active");
       removeActiveClass(section);
     }
   }
 }
 
+// check if the section is in the viewport
 function inViewport(section) {
   const sectionOnScreen = section.getBoundingClientRect();
   if (sectionOnScreen.top <= 450 && sectionOnScreen.bottom >= 450) {
@@ -74,15 +82,17 @@ function inViewport(section) {
   }
 }
 
+// function to add 'your-active-class'
 function addActiveClass(section) {
   section.classList.add('your-active-class');
 }
 
+// function to remove 'your-active-class'
 function removeActiveClass(section) {
   section.classList.remove('your-active-class');
 }
 
-// Check whether section is active when user scrolls page.
+// Check whether section is active as user scrolls page.
 document.addEventListener("scroll", function() {
   makeActive();
 });
