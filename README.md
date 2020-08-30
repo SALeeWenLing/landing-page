@@ -8,13 +8,22 @@
 
 ## Aim of Project
 
-Use JavaScript to create a landing page with a dynamic navigation bar that scrolls to each selected section of a web page.  
+Use JavaScript to create a dynamic navigation bar that scrolls to each selected section of a web page and highlights the section currently in the Viewport.  
 
-## Instructions
+## Description
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+The landing page is fully customisable and allows the user to navigate to each section of the page by clicking the links in the Navigation Bar.
+On the backend, the section of the page that is in the Viewport is dynamically given the class "your-active-class", and the corresponding Navigation Bar Item is given the class "active". This is linked to the CSS, in which the styles for the "active" state are determined. 
+A smooth scrolling effect was also added to smootly scroll to each selected section. 
 
-To get started, open `js/app.js` and start building out the app's functionality
+## Features
 
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
-# landing-page
+List of features ready:
+- Dynamic navigation bar
+- Scroll to section
+
+To-do list:
+- Collapse navigation bar for small devices
+
+## Status
+- Project is: in progress
