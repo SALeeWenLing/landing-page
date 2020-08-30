@@ -98,6 +98,18 @@ document.addEventListener("scroll", function() {
 });
 
 // Scroll to anchor ID using scrollTO event
+const links = document.querySelectorAll("a");
+for(const link of links) {
+  link.addEventListener("click", function(){
+    const selectedSection = link.getAttribute('href');
+    const target = document.querySelector(selectedSection);
+    target.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  });
+}
+
 
 
 /**
